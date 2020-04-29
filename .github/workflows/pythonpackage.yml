@@ -29,6 +29,8 @@ jobs:
         brew install python
         ls /Users/runner/hostedtoolcache/Python
         ls /System/Library/Frameworks/Python.framework
+        ls /System/Library/Frameworks/Python.framework/Python
+        ls /System/Library/Frameworks/Python.framework/Versions
         # needed for installing matplotlib
         conda install python.app
         brew install pkg-config
