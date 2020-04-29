@@ -28,6 +28,9 @@ jobs:
       run: |
         brew upgrade python
         ls /Users/runner/hostedtoolcache/Python
+        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+        ~/miniconda.sh -b -p $HOME/miniconda
+        conda install python.app
         
         # needed for installing matplotlib
         brew install pkg-config
