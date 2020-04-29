@@ -27,6 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         # needed for installing matplotlib
+        conda install python.app
         brew install pkg-config
         pip install -e ".[optional, test, doc]"
         pip install flake8
