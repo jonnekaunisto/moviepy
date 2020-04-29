@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         which python
-        ls /bin
+        ls /Users/runner/hostedtoolcache/
         # needed for installing matplotlib
         conda install python.app
         brew install pkg-config
