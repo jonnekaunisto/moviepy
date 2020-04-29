@@ -27,7 +27,8 @@ jobs:
     - name: Install dependencies
       run: |
         which python
-        ls /Users/runner/hostedtoolcache/
+        ls /Users/runner/hostedtoolcache/Python
+        ls /System/Library/Frameworks/
         # needed for installing matplotlib
         conda install python.app
         brew install pkg-config
