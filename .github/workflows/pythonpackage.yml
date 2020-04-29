@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         # needed for installing matplotlib
-        sudo apt-get install pkg-config
+        brew install pkg-config
         pip install -e ".[optional, test, doc]"
         pip install flake8
         pip install --upgrade setuptools
