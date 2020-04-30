@@ -37,7 +37,7 @@ jobs:
       run: |
         pythonw --version
         which python
-        python -m site --user-site
+        pythonw -m site --user-site
         echo $PYTHONPATH
         echo $PYTHONHOME
     - name: Install dependencies
