@@ -25,7 +25,7 @@ jobs:
         activate-conda: true
     - name: Install dependencies
       run: |
-        apt-get install imagemagick fonts-liberation
+        brew install imagemagick
         conda install python.app
         which pythonw     
         # needed for installing matplotlib
