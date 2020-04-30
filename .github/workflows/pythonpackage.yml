@@ -24,7 +24,7 @@ jobs:
       with:
         activate-conda: true
     - name: Python version
-      run: which pythonw     
+      run: pythonw --version   
     - name: Install dependencies
       run: |
         brew install imagemagick
