@@ -23,12 +23,14 @@ jobs:
     - uses: s-weigand/setup-conda@v1
       with:
         activate-conda: true
+    - name: Install conda python version 3.6
+      if: matrix.python-version == '3.6'
+      run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py36_10.tar.bz2
     - name: Python version
       run: pythonw --version   
     - name: Install dependencies
       run: |
         brew install imagemagick
-        conda install python.app
         # needed for installing matplotlib
         brew install pkg-config
         pythonw -m pip install -e ".[optional, test, doc]"
