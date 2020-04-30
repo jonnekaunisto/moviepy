@@ -23,11 +23,12 @@ jobs:
     - uses: s-weigand/setup-conda@v1
       with:
         activate-conda: true
+    - name: Python version
+      run: which pythonw     
     - name: Install dependencies
       run: |
         brew install imagemagick
         conda install python.app
-        which pythonw     
         # needed for installing matplotlib
         brew install pkg-config
         pythonw -m pip install -e ".[optional, test, doc]"
