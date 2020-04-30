@@ -25,7 +25,10 @@ jobs:
         auto-update-conda: true
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-      run: |        
+      run: |  
+        conda activate
+        python --version
+        which python      
         # needed for installing matplotlib
         brew install pkg-config
         pip install -e ".[optional, test, doc]"
