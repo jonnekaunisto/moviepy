@@ -25,16 +25,16 @@ jobs:
     # Pick the installation of Python Framework build from conda, because they do not support versioning
     # https://anaconda.org/anaconda/python.app/files
     #- name: Install conda python version 3.6
-   #   if: matrix.python-version == '3.6'
-  #    run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py36_10.tar.bz2
-  #  - name: Install conda python version 3.7
-  #    if: matrix.python-version == '3.7'
-  #    run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py37_10.tar.bz2
-  #  - name: Install conda python version 3.8
-  #    if: matrix.python-version == '3.8'
-  #    run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py38_10.tar.bz2
+    #  if: matrix.python-version == '3.6'
+    #  run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py36_10.tar.bz2
+    #- name: Install conda python version 3.7
+    #  if: matrix.python-version == '3.7'
+    #  run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py37_10.tar.bz2
+    #- name: Install conda python version 3.8
+    #  if: matrix.python-version == '3.8'
+    #  run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py38_10.tar.bz2
     - name: install pythonw
-      run: conda install pythonw=3.7
+      run: conda install pythonw
     - name: Python version
       run: |
         pythonw --version
