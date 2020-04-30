@@ -27,7 +27,9 @@ jobs:
       run: |
         conda --version
         python --version
-        which python      
+        which python
+        conda install python.app
+        which pythonw     
         # needed for installing matplotlib
         brew install pkg-config
         pip install -e ".[optional, test, doc]"
