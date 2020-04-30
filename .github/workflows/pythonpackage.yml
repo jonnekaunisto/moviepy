@@ -34,7 +34,7 @@ jobs:
     #  if: matrix.python-version == '3.8'
     #  run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py38_10.tar.bz2
     - name: install pythonw
-      run: conda install pythonw
+      run: conda install python.app
     - name: Python version
       run: |
         pythonw --version
