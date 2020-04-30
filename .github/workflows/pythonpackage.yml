@@ -11,21 +11,28 @@ on:
     branches: [ master ]
 
 jobs:
+  # Uses Python Framework build because on macos matplotlib requires it
   macos:
-
     runs-on: macos-latest
     strategy:
       matrix:
-        python-version: [3.6]
-
+        python-version: [3.6, 3.7, 3.8]
     steps:
     - uses: actions/checkout@v2
     - uses: s-weigand/setup-conda@v1
       with:
         activate-conda: true
+    # Pick the installation of Python Framework build from conda, because they do not support versioning
+    # https://anaconda.org/anaconda/python.app/files
     - name: Install conda python version 3.6
       if: matrix.python-version == '3.6'
       run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py36_10.tar.bz2
+    - name: Install conda python version 3.7
+      if: matrix.python-version == '3.7'
+      run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py37_10.tar.bz2
+    - name: Install conda python version 3.8
+      if: matrix.python-version == '3.8'
+      run: conda install http://repo.continuum.io/pkgs/main/osx-64/python.app-2-py38_10.tar.bz2
     - name: Python version
       run: pythonw --version   
     - name: Install dependencies
