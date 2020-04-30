@@ -16,12 +16,13 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.7]
     steps:
     - uses: actions/checkout@v2
     - uses: s-weigand/setup-conda@v1
       with:
         activate-conda: true
+    # TODO: fix adding the different versions  
     # Pick the installation of Python Framework build from conda, because they do not support versioning
     # https://anaconda.org/anaconda/python.app/files
     #- name: Install conda python version 3.6
