@@ -22,6 +22,8 @@ jobs:
     - uses: s-weigand/setup-conda@v1
       with:
         activate-conda: true
+    - name: Uninstall default python
+      run: conda unistall pythonw
     # Pick the installation of Python Framework build from conda, because they do not support versioning
     # https://anaconda.org/anaconda/python.app/files
     - name: Install conda python version 3.6
