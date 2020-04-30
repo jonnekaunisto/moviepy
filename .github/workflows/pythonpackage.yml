@@ -36,6 +36,7 @@ jobs:
     - name: Python version
       run: |
         pythonw --version
+        which python
         echo $PYTHONPATH
         echo $PYTHONHOME
     - name: Install dependencies
